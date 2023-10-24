@@ -4,7 +4,7 @@
 
 A simple React-based weather application that allows users to check the current weather conditions for a given city.
 
-![Weather App Screenshot](screenshot.png)
+![Weather App Screenshot](weather.png)
 
 ## Table of Contents
 
