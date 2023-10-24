@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.weatherInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Style for the container div */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+/* Style for the input field */
+.city-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+/* Style for the search button */
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0074D9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.search-button:hover {
+  background-color: #0056B3;
+}
+
+/* Style for the weather information container */
+.weather-info-container {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #e02020;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the title */
+.weather-info-title {
+  font-size: 24px;
+  color: #b39d9d;
+  margin-bottom: 10px;
+}
+
+/* Style for the city name */
+.city-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #419dee;
+}
+
+/* Style for the temperature */
+.temperature {
+  font-size: 16px;
+  color: #b39d9d;
+  margin-top: 10px;
+}
+
+/* Style for the weather description */
+.description {
+  font-size: 16px;
+  color: #b39d9d;
+  margin-top: 10px;
+}
+
+/* Style for wind speed */
+.wind-speed {
+  font-size: 16px;
+  color: #b39d9d;
+  margin-top: 10px;
+}
+
+/* Style for wind direction */
+.wind-direction {
+  font-size: 16px;
+  color: #b39d9d;
+  margin-top: 10px;
+}
+.humidity{
+  font-size: 16px;
+  color: #b39d9d;
+  margin-top:10px ;
+}
