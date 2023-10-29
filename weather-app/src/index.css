@@ -62,7 +62,7 @@ body {
 /* Style for the title */
 .weather-info-title {
   font-size: 24px;
-  color: #b39d9d;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -70,38 +70,67 @@ body {
 .city-name {
   font-size: 18px;
   font-weight: bold;
-  color: #419dee;
+  color: rgb(15, 179, 179);
 }
 
 /* Style for the temperature */
 .temperature {
   font-size: 16px;
-  color: #b39d9d;
+  color: whitesmoke;
   margin-top: 10px;
 }
 
 /* Style for the weather description */
 .description {
   font-size: 16px;
-  color: #b39d9d;
+  color: whitesmoke;
   margin-top: 10px;
 }
 
 /* Style for wind speed */
 .wind-speed {
   font-size: 16px;
-  color: #b39d9d;
+  color: whitesmoke;
   margin-top: 10px;
 }
 
 /* Style for wind direction */
 .wind-direction {
   font-size: 16px;
-  color: #b39d9d;
+  color: whitesmoke;
   margin-top: 10px;
 }
 .humidity{
   font-size: 16px;
-  color: #b39d9d;
+  color: whitesmoke;
   margin-top:10px ;
+}
+.feels-like{
+  font-size: 16px;
+  color: whitesmoke;
+  margin-top:10px 
+}
+.weather-forecast{
+  text-align: center;
+  top: 0;
+}
+.descriptio {
+  font-size: 16px;
+  color: rgb(99, 39, 39);
+  margin-top: 10px;
+}
+.forecast-container{
+  padding: 20px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.forecast-item{
+  padding: 10px;
+  background: #0074D9;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
