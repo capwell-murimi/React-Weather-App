@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Searchbar from './components/Searchbar';
-import WeatherForecast from './components/weatherForecast';
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -23,7 +22,6 @@ const Weather = () => {
 
     fetchWeatherData();
   }, [city]); // Step 2: Trigger the effect when 'city' changes
-  
 
   // Step 2: Create a callback function to handle user input
   function handleCityChange(newCity) {
@@ -31,7 +29,7 @@ const Weather = () => {
   }
 
   return (
-    <>
+    <div>
       <div className='weatherInfo'>
         <Searchbar onCityChange={handleCityChange} /> {/* Step 2: Pass the callback function */}
         {weatherData ? (
@@ -45,18 +43,14 @@ const Weather = () => {
          <p className="wind-speed">Wind Speed: {weatherData.current.wind_kph} kp/h</p>
          <p className="wind-direction">Wind Direction: {weatherData.current.wind_dir}</p>
          <p className='humidity'>Humidity: {weatherData.current.humidity}</p>
-        <p  className='feels-like'>Feels like: {weatherData.current.feelslike_c}</p>
          {/* Add more weather data as needed */}
        </div>
+
         ) : (
-         null
+          <p>Enter City Name...</p>
         )}
       </div>
-      <WeatherForecast  city={city}/>
-      
-
-
-    </>
+    </div>
   );
 };
 
