@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('wim-van-t-einde-uj7eb7CgqRk-unsplash.jpg');
 }
 
 .weatherInfo{
@@ -13,15 +14,19 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin-top: 5%;
 }
 
 /* Style for the container div */
 .search-bar-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
+    display: flex;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
 }
+
+
 
 /* Style for the input field */
 .city-input {
@@ -54,7 +59,7 @@ body {
   text-align: center;
   margin: 20px;
   padding: 20px;
-  background-color: #e02020;
+  background-color: #f0e1e1;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -62,7 +67,7 @@ body {
 /* Style for the title */
 .weather-info-title {
   font-size: 24px;
-  color: #b39d9d;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -70,38 +75,67 @@ body {
 .city-name {
   font-size: 18px;
   font-weight: bold;
-  color: #419dee;
+  color: rgb(15, 179, 179);
 }
 
 /* Style for the temperature */
 .temperature {
   font-size: 16px;
-  color: #b39d9d;
+  color: rgb(63, 58, 58);
   margin-top: 10px;
 }
 
 /* Style for the weather description */
 .description {
   font-size: 16px;
-  color: #b39d9d;
+  color: rgb(63, 58, 58);
   margin-top: 10px;
 }
 
 /* Style for wind speed */
 .wind-speed {
   font-size: 16px;
-  color: #b39d9d;
+  color: rgb(63, 58, 58);
   margin-top: 10px;
 }
 
 /* Style for wind direction */
 .wind-direction {
   font-size: 16px;
-  color: #b39d9d;
+  color: rgb(63, 58, 58);
   margin-top: 10px;
 }
 .humidity{
   font-size: 16px;
-  color: #b39d9d;
+  color: rgb(63, 58, 58);
   margin-top:10px ;
+}
+.feels-like{
+  font-size: 16px;
+  color: rgb(63, 58, 58);
+  margin-top:10px 
+}
+.weather-forecast{
+  text-align: center;
+  margin-top: 100px;
+}
+.descriptio {
+  font-size: 16px;
+  color: rgb(99, 39, 39);
+  margin-top: 10px;
+}
+.forecast-container{
+  padding: 20px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.forecast-item{
+  padding: 10px;
+  background: #0074D9;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

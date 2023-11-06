@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from 'react';
 
 function WeatherForecast({city}) {
@@ -27,17 +28,21 @@ function WeatherForecast({city}) {
     }, [city]);
     return (
         <div>
+            
+            <div    style={{height:"auto"}} className="weather-forecast">
             {forecastData   ? <h1 style={{textAlign:"center"}}>ForeCast</h1>    :   null}
-            <div className="weather-forecast">
                 {forecastData ? (
                     <div className="forecast-container">
                         {forecastData.map((day, index) => (
                             <div key={index} className="forecast-item">
                                 <p className="date">{day.date}</p>
-                                <p className="max-temperature">Max Temp: {day.day.maxtemp_c}°C</p>
-                                <p className="min-temperature">Min Temp: {day.day.mintemp_c}°C</p>
-                                <p className="descriptio">Description: {day.day.condition.text}</p>
+                                <p className="max-temperature">Max: {day.day.maxtemp_c}°C</p>
+                                <p className="min-temperature">Min: {day.day.mintemp_c}°C</p>
+                                <p className="descriptio">{day.day.condition.text}</p>
                                 {/* Add more forecast data as needed */}
+                                {(day.day.condition.text === 'Patchy rain possible') ?   (<img src='/images/icons8-rain-64.png'/>)  :null}
+                                {(day.day.condition.text === 'Moderate rain') ?   (<img src='images/icons8-moderate-rain-48.png'/>)  :null}
+                                {(day.day.condition.text === 'Sunny') ?   (<img src='images/icons8-sunny-64.png'/>)  :null}
                             </div>
                         ))}
                     </div>
