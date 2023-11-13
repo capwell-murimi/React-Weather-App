@@ -6,6 +6,35 @@ import WeatherForecast from './components/weatherForecast';
 function Weather() {
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState(''); // Step 1: State for user input
+  const [greeting, setGreeting] = useState('');
+
+  
+  useEffect(() => {
+    function ourGreeting(){
+      const currentHour = new Date().getHours();
+
+      if (currentHour >= 0 && currentHour < 12) {
+        setGreeting('Good Morning');
+      } else if (currentHour >= 12 && currentHour < 18) {
+        setGreeting('Good Afternoon');
+      } else if(currentHour >= 18 && currentHour <= 23){
+        setGreeting('Good Evening');
+      }
+      else{
+        setGreeting('Good Night');
+      }
+    }
+
+    ourGreeting()
+
+    const intervalId = setInterval(ourGreeting,60000)
+
+    return () => clearInterval(intervalId)
+  },[])
+
+
+
+
 
   useEffect(() => {
     async function fetchWeatherData() {
@@ -39,7 +68,11 @@ function Weather() {
       <div className='weatherInfo'>
         {weatherData ? (
           <div style={{ textAlign: 'center' }} className="weather-info-container">
-            <h2 className="weather-info-title">Weather Today</h2>
+            <h3>{greeting}</h3>
+            {(greeting === 'Good Morning') ? (<img className='tod' src='/images/morning.png'/>) : null}
+            {(greeting === 'Good Afternoon') ? (<img className='tod'  src='/images/afternoon.png'/>) : null}
+            {(greeting === 'Good Evening') ? (<img className='tod' src='/images/half-moon.png'/>) : null}
+            {(greeting === 'Good Night') ? (<img className='tod' src='/images/night-mode.png'/>) : null}
             <p className="city-name">{weatherData.location.name}</p>
             <p className="temperature">{weatherData.current.temp_c}°C / {weatherData.current.temp_f}°F</p>
             <img src='images/icons8-temperature-64.png' />
@@ -47,7 +80,8 @@ function Weather() {
             {(weatherData.current.condition.text === "Partly cloudy") ? (<img src='/images/icons8-partly-cloudy-65.png' />) : null}
             {(weatherData.current.condition.text === "Clear Sky") ? (<img src='/images/icons8-sky-48.png' />) : null}
             {(weatherData.current.condition.text === "Patchy rain possible") ? (<img src='/images/icons8-cloud-with-rain-48.png' />) : null}
-            {(weatherData.current.condition.text === "Snow") ? (<img src='' />) : null}
+            {(weatherData.current.condition.text === "Patchy light drizzle") ? (<img src='images/icons8-drizzle-64.png' />) : null}
+            {(weatherData.current.condition.text === "Light rain shower") ? (<img src='images/icons8-drizzle-64.png' />) : null}
             {(weatherData.current.condition.text === "Thunderstorms") ? (<img src='/images/icons8-snow-60.png' />) : null}
             {(weatherData.current.condition.text === "Foggy") ? (<img src='/images/icons8-partly-cloudy-65.png' />) : null}
             {(weatherData.current.condition.text === "Overcast") ? (<img src='/images/icons8-partly-cloudy-65.png' />) : null}
@@ -62,9 +96,10 @@ function Weather() {
             <img src='images/icons8-humidity-64.png' />
             <p className='feels-like'>Feels like: {weatherData.current.feelslike_c}</p>
             {/* Add more weather data as needed */}
+
           </div>
         ) : (
-          <p>Enter a city above</p>
+          <img className='intocartoon' src='/images/upPoint.png'/>    
         )}
       </div>
       <WeatherForecast city={city} />

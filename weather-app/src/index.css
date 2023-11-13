@@ -5,17 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('wim-van-t-einde-uj7eb7CgqRk-unsplash.jpg');
+  background-image: url('weatherback.jpg');
+  background-size: cover;
+  
 }
 
-.weatherInfo{
+.weatherInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: 5%;
+  margin-top: 90px;
+  animation: fadeIn 1s ease-in-out; /* Add this line for the animation */
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* Style for the container div */
 .search-bar-container {
@@ -62,6 +75,7 @@ body {
   background-color: #f0e1e1;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: auto;
 }
 
 /* Style for the title */
@@ -116,9 +130,18 @@ body {
   margin-top:10px 
 }
 .weather-forecast{
-  text-align: center;
+  
   margin-top: 100px;
 }
+
+.weather-forecast {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .descriptio {
   font-size: 16px;
   color: rgb(99, 39, 39);
@@ -128,7 +151,13 @@ body {
   padding: 20px;
   width: auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ 
+}
+.forecast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* This allows the items to wrap to the next line if they don't fit in a single line */
 }
 .forecast-item{
   padding: 10px;
@@ -138,4 +167,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tod{
+  width: 40px;
+  height: auto;
 }
